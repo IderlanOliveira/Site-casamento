@@ -1,0 +1,45 @@
+body{
+    background-color: #E74C3C;
+    background-image: url(/img/img2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    
+    padding: 50px;
+    color: #E74C3C;
+}
+
+input{
+  color: #f2f2f2;
+  background-color: #E74C3C;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  display: block;
+}
+
+.titulo{
+    font-size: 30px;
+    color: #E74C3C;
+    display: block;
+}
+
+.button{
+    color: #f2f2f2;
+    background-color: #E74C3C;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 10px;
+    display: block;
+}
+
+.container{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+}
