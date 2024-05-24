@@ -1,103 +1,101 @@
-body{
-    background-color: #E74C3C;
+body {
+  background-color: #E74C3C;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.barra-inicial{
-    color: #f2f2f2;
-    text-align: center;
-    justify-content: baseline;
+.barra-inicial {
+  color: #f2f2f2;
+  text-align: center;
+  justify-content: baseline;
 }
 
-.lista{
-    color: #f2f2f2;
-    
+.lista {
+  color: #f2f2f2;
 }
 
-h1{
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px;
+h1 {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
 }
 
-
-h3{
-    text-align: center;
-    padding: 5%;
+h3 {
+  text-align: center;
+  padding: 5%;
 }
 
 .container-buttons {
-    display: grid;
-    grid-template-columns: repeat(4, auto); /* 4 colunas com largura automática */
-    gap: 10px; /* Espaçamento entre os botões */
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* 4 colunas com largura automática */
+  gap: 10px; /* Espaçamento entre os botões */
 }
 
 .buttons {
-    color: #E74C3C;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    white-space: nowrap; /* Garante que o conteúdo não quebre linha */
+  color: #E74C3C;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  white-space: nowrap; /* Garante que o conteúdo não quebre linha */
 }
-  
-/* Responsividade */
-@media (max-width: 768px) {
-  .button-container {
-    grid-template-columns: repeat(2, auto); /* 2 colunas em telas menores */
-  }
-}
-  
-@media (max-width: 480px) {
-  .button-container {
-    grid-template-columns: repeat(1, auto); /* 1 coluna em telas muito pequenas */
-  }
-}
-  
 
-/* codigo do Gemini */
+/* Responsividade */
+@media (max-width: 1024px) {
+  .container-buttons {
+      grid-template-columns: repeat(3, auto); /* 3 colunas em telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .container-buttons {
+      grid-template-columns: repeat(2, auto); /* 2 colunas em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-buttons {
+      grid-template-columns: repeat(1, auto); /* 1 coluna em telas muito pequenas */
+  }
+}
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .lista-convidados {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .lista-convidados th, .lista-convidados td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .lista-convidados th {
-    background-color: #f2f2f2;
-  }
-  
-  #adicionarConvidado {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+  width: 80%;
+  margin: 0 auto;
+}
 
-/* confirmação de presença */
+.lista-convidados {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.lista-convidados th, .lista-convidados td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.lista-convidados th {
+  background-color: #f2f2f2;
+}
+
+#adicionarConvidado {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
