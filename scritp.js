@@ -35,3 +35,33 @@ botaoAdicionar.addEventListener('click', () => {
     atualizarLista();
   }
 });
+
+// confirmação de presença
+
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+
+// Configure o body parser para receber JSON
+app.use(bodyParser.json());
+
+// Defina a rota para a confirmação de presença
+app.post('/confirmacao-presenca', (req, res) => {
+  const { nome, email, presenca } = req.body;
+
+  // Valide os dados
+  if (!nome || !email || !presenca) {
+    return res.status(400).send('Dados inválidos');
+  }
+
+  // Processe os dados (exemplo: salve no banco de dados)
+  console.log(`Confirmação de presença: ${nome}, ${email}, ${presenca}`);
+
+  // Envie uma resposta de sucesso
+  res.status(200).send('Confirmação de presença enviada!');
+});
+
+// Inicie o servidor
+app.listen(3000, () => {
+  console.log('Servidor em execução na porta 3000');
+});
